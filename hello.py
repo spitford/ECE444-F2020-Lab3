@@ -4,7 +4,7 @@ from flask_moment import Moment
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.fields.html5 import EmailField
-from wtforms.validators import DataRequired, Email, Regexp
+from wtforms.validators import DataRequired, Email
 from datetime import datetime
 
 app = Flask(__name__)
@@ -48,4 +48,4 @@ class NameForm(FlaskForm):
     submit = SubmitField('Submit')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0")
